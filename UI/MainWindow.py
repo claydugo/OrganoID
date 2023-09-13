@@ -1,11 +1,11 @@
 import typing
 from pathlib import Path
 from typing import List
-from PySide6.QtWidgets import QMainWindow, QWidget, QListWidget, QPushButton, QVBoxLayout, \
+from qtpy.QtWidgets import QMainWindow, QWidget, QListWidget, QPushButton, QVBoxLayout, \
     QHBoxLayout, QFileDialog, QLabel, QFormLayout, QSpinBox, QLineEdit, QCheckBox, \
     QDoubleSpinBox, QDialog, QComboBox, QMessageBox
-from PySide6.QtGui import QPixmap
-from PySide6.QtCore import Qt, QTimer
+from qtpy.QtGui import QPixmap
+from qtpy.QtCore import Qt, QTimer
 from PIL import ImageQt, Image
 from UI.ProcessingWorker import ProcessingWorker
 import os
@@ -146,7 +146,7 @@ class SettingsWidget(QWidget):
         self.edgeSigmaWidget = DoubleSpinBoxWidget(2, 0, 256, 1)
         self.edgeMinWidget = DoubleSpinBoxWidget(0.005, 0, 1, 0.1)
         self.edgeMaxWidget = DoubleSpinBoxWidget(0.05, 0, 1, 0.1)
-        self.minimumAreaWidget = SpinBoxWidget(100, 0, 1e9, 100)
+        self.minimumAreaWidget = SpinBoxWidget(100, 0, 1000000000, 100)
         self.fillHolesWidget = CheckBoxWidget("", True)
         self.removeBorderWidget = CheckBoxWidget("", True)
         self.separateContours = CheckBoxWidget("", True)

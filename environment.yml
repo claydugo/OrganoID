@@ -1,0 +1,16 @@
+name: organoID
+
+dependencies:
+  - python >=3.10
+  - tensorflow
+  - numpy >=1.21
+  - pillow
+  - scikit-image >=0.19.3
+  - scipy
+  - augmentor
+  - matplotlib-base
+  - pandas
+  - seaborn
+  - qtpy
+  - pyside6
+  - xlsxwriter

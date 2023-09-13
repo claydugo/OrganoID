@@ -13,22 +13,20 @@ install all packages listed in <b>requirements.txt</b>.
 NOTE: OrganoID uses TensorFlow for neural network predictions. TensorFlow will automatically run on your
 GPU if compatible libraries are installed for your graphics card (e.g. NVIDIA CUDA). See tensorflow.org/install for guidance.</i>
 
-1) Install Anaconda (https://www.anaconda.com/products/distribution).
-2) Open <i>Anaconda Prompt</i> and create a new environment:
-   ```
-   >> conda create -n OrganoID python=3.9
-   >> activate OrganoID
-   ```
-3) Download OrganoID and extract it to a directory of your choosing (https://github.com/jono-m/OrganoID/archive/refs/heads/master.zip). You may also clone the repository instead.
-4) In <i>Anaconda Prompt</i>, navigate to the OrganoID root directory (which contains <i>OrganoID.py</i>):
-   ```
-   >> cd path/to/OrganoID/directory
-   ```
-5) If you would like to run TensorFlow on your GPU (which may be faster for batch processing), go to https://www.tensorflow.org/install/pip and follow the relevant instructions for your operating system, if GPU-mode is supported. (e.x. Step 5 for Windows Native). Skip this step otherwise.
-6) Install all OrganoID requirements:
-   ```
-   pip install -r requirements.txt
-   ```
+1) Install Miniconda
+     ```bash
+     wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+     bash "Miniforge3-$(uname)-$(uname -m).sh" -p "${HOME}/miniforge3"
+     ```
+2) Clone OrganoID
+    ```bash
+    git clone git@github.com:claydugo/OrganoID.git
+    cd OrganoID/
+    ```
+3) Create conda environment
+    ```
+    mamba env create --file environment.yml -n organoID
+    ```
 
 <h1>USAGE</h1>
 

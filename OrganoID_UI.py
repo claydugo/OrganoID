@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets
+from qtpy import QtWidgets
 from UI.MainWindow import MainWindow
 import multiprocessing
 import sys
